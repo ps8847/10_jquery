@@ -1,0 +1,7 @@
+why jquery ?
+
+1. short seelctors 
+2. variety of animation functions 
+3. easy dom manipulation 
+4. easy css styling
+5. easy dom traversing 

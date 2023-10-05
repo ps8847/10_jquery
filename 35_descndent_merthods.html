@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #main-outer {
+            background: lightblue;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #outer {
+            background: lightgreen;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #inner {
+            background: lightpink;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #inner div {
+            display: inline-block;
+            background: lightskyblue;
+            padding: 25px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Methods list</h1>
+    <ul>
+        <li>Descentdant methods</li>
+        <ol>
+            <li>children()</li>
+            <li>find()</li>
+        </ol>
+
+    </ul>
+
+
+    <h1>JQUERY Descentdant Methods</h1>
+    <div id="main-outer">
+        <h2>Main Div</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2 id="child-head">Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div class="test">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // $('#inner').children().css("background", "red");
+            // $('#outer').children().css("background", "red");
+            // $('#inner').children(".test").css("background", "red");
+
+            // find
+            $('#main-outer').find(".test").css("background", "red");
+        })
+    </script>
+</body>
+
+</html>

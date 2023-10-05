@@ -1,0 +1,11 @@
+1.  download jquery.js file
+
+2. include jquery.js file in html file
+
+3. do jquery code in <script> tag
+
+
+
+****************************
+
+can implement through cdn link

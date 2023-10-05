@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #first {
+            background: lightblue;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #second {
+            background: lightgreen;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>JQUERY has() and is() Methods</h1>
+
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>adipisicing elit. Temporibus facilis illum aut rerum quod? Voluptatum quia fugiat similique culpa aliquid!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, eos.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li><span>Grapes</span></li>
+        <li>Banana</li>
+        <li>Apple</li>
+    </ul>
+
+
+    <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nesciunt similique quisquam autem debitis! Aliquid non quis voluptatum assumenda voluptas?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, <span class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vero.</span> adipisicing elit. Exercitationem, dicta.</p>
+
+    <br>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // $('p').has('span').css("background", "gold");
+            // $('p').has('b').css("background", "gold");
+            // $('p').has('b,span').css("background", "gold");
+            // $('li').has('b,span').css("background", "gold");
+
+            // has find all targest in its children
+            // $('p').has('.test').css("background", "gold");
+
+
+            // is
+
+            $('p').click(function() {
+                if ($(this).parent().is('div')) {
+                    $(this).css('background', 'gold')
+                }
+            })
+
+        })
+    </script>
+</body>
+
+</html>

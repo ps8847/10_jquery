@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #box {
+            background: lightgreen;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animate</h1>
+
+    <div id="box">Hello world!! </div>
+    <br>
+
+    <button id="AnimateBtn">Animate</button>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#AnimateBtn').click(function() {
+
+
+                // $('#box').animate({
+                //     left: '150px',
+                //     // width: '200px'
+                //     // width: '+=100px',
+                //     // width: 'hide',
+                //     width: 'toggle',
+                //     fontSize: '25px',
+                //     borderWidth: '5px'
+                // })
+
+
+                // $('#box').animate({
+                //     left: '150px'
+                // })
+                // $('#box').animate({
+                //     top: '150px'
+                // })
+                // $('#box').animate({
+                //         width: '250px'
+                //     })
+                //     // $('#box').animate({left: '150px'})
+
+
+                // speed
+
+                // $('#box').animate({
+                //     left: '150px'
+                // }, "slow")
+                // $('#box').animate({
+                //     top: '150px'
+                // }, "fast")
+                // $('#box').animate({
+                //     width: '250px'
+                // })
+
+                // paramter speed in miliseconds
+
+                // $('#box').animate({
+                //     left: '150px'
+                // }, 3000)
+                // $('#box').animate({
+                //     top: '150px'
+                // }, 3000)
+                // $('#box').animate({
+                //     width: '250px'
+                // })
+
+                // callback function
+
+                $('#box').animate({
+                    left: '150px'
+                }, 3000, function() {
+                    console.log("first animation completed!!");
+                })
+                $('#box').animate({
+                    top: '150px'
+                }, 3000)
+                $('#box').animate({
+                    width: '250px'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

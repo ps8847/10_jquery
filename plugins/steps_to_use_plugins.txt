@@ -1,0 +1,43 @@
+1) Map plugin file download 
+2) Cal map plugin function 
+3) pass paramter which location 
+
+
+diffrent categories of plugins available are : 
+
+Accordions 
+Charts & Graphs 
+Calendar 
+Drag & Drop 
+Image Effects
+Maps 
+Video & Audio Players 
+Zoom effect 
+Sliders 
+form Validations 
+Tabs 
+Popup Window 
+
+
+Implement jquery Plugins 
+
+1) Add Jquery file in html page 
+2) Add jquery Plugin file 
+3) Attach Jquery Plugin with Html tag & Pass Parameter
+
+
+
+Forst Step 
+
+// go to https://www.bestjquery.com/
+
+2) Clcik at "Menus"
+3) ater that Search For >> GRT Fixed
+    Select It...
+4) click on Demo >> to see the Demo 
+5) or click on "download"
+    the github will open and we will be able to download that plugin
+
+6) ater Downloading the File >> Now ee can use it.
+        just read the steps and doc,entaion of plugin >>
+            and we are Ready to Rock!!

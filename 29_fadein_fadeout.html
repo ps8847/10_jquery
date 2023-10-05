@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background: lightgreen;
+            padding: 30px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>fade in , fade to , fadetoggle , fade out</h1>
+
+    <div id="box" class="test">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque recusandae dolor reprehenderit nostrum aperiam.</p>
+    </div>
+    <br>
+
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeInBtn">Fade in</button>
+    <button id="fadeToggleBtn">Fade Toggle</button>
+    <button id="fadeToBtn">Fade To</button>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#fadeOutBtn').click(function() {
+                // $('#box p').fadeOut();
+                // $('#box p').fadeOut("slow");
+                // $('#box p').fadeOut("fast");
+                // $('#box p').fadeOut(3000);
+                $('#box p').fadeOut(3000, function() {
+                    console.log("now it is hidden");
+                });
+            })
+
+            $('#fadeInBtn').click(function() {
+                // $('#box p').fadeIn();
+                // $('#box p').fadeIn("slow");
+                // $('#box p').fadeIn("fast");
+                // $('#box p').fadeIn(3000);
+                $('#box p').fadeIn(3000, function() {
+                    console.log("now it is showing");
+                });
+            })
+
+            $('#fadeToggleBtn').click(function() {
+                $('#box p').fadeToggle();
+            })
+
+            $('#fadeToBtn').click(function() {
+                // $('#box p').fadeTo(2000,0.5)
+                $('#box p').fadeTo(2000, 0.5, function() {
+                    console.log("using fadeTo");
+                })
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+1
+
+js      =>   document.getElementByClassName('classname')
+
+jquery  =>   $('.classname')
+
+
+2
+
+js      =>   document.getElementById('idname')
+
+jquery  =>   $('#idname')
+
+3
+
+js      =>   document.getElementByTagName('tagname')
+
+jquery  =>   $('tagname')
+
+
+****************************************************
+
+benefits 
+
+1. browser independent
+2. increase coding speed
+
+

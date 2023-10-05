@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #main-outer {
+            background: lightblue;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #outer {
+            background: lightgreen;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #inner {
+            background: lightpink;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        
+        #inner div {
+            display: inline-block;
+            background: lightskyblue;
+            padding: 25px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Methods list</h1>
+    <ul>
+        <li>Ancestors</li>
+        <ol>
+            <li>parent()</li>
+            <li>parents()</li>
+            <li>parentsUntil()</li>
+            <li>closest()</li>
+            <li>offsetParent()</li>
+        </ol>
+        <li>descendants</li>
+        <li>siblings</li>
+        <li>filtering</li>
+    </ul>
+
+
+    <h1>JQUERY Ancestors Methods</h1>
+    <div id="main-outer">
+        <h2>Main Div</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2 id="child-head">Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div id="child-C">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // $('#child-C').parent().css('background', 'red');
+            // $('#child-C').parents().css('background', 'red');
+            // $('#inner').parents("#main-outer").css('background', 'red');
+            // $('#child-C').parentsUntil("#main-outer").css('background', 'red');
+            // $('#inner').parentsUntil("#main-outer").css('background', 'red');
+            // $('#child-C').offsetParent().css('background', 'red'); // IT WILL SELECT THAT PARENT WHICH WILL HAVE STYLE A (POSITION) << CSS
+            $('#child-C').closest("div").css('background', 'red');
+        })
+    </script>
+</body>
+
+</html>

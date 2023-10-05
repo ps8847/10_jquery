@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background: lightgreen;
+            padding: 30px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Slidein , SlideOut and SlideToggle</h1>
+
+    <div id="box" class="test">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque recusandae dolor reprehenderit nostrum aperiam.</p>
+    </div>
+    <br>
+
+    <button id="SlideUpBtn">Slide Up</button>
+    <button id="SlideDownBtn">Slide Down</button>
+    <button id="SlideToggleBtn">Slide Toggle</button>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#SlideUpBtn').click(function() {
+                // $('#box p').slideUp();
+                // $('#box p').slideUp("slow");
+                // $('#box p').slideUp("fast");
+                $('#box p').slideUp(3000);
+                // $('#box p').slideUp(3000, function() {
+                //     console.log("now it is sliding up");
+                // });
+            })
+
+            $('#SlideDownBtn').click(function() {
+                // $('#box p').slideDown();
+                // $('#box p').slideDown("slow");
+                // $('#box p').slideDown("fast");
+                $('#box p').slideDown(3000);
+                // $('#box p').slideDown(3000, function() {
+                //     console.log("now it is sliding down");
+                // });
+            })
+
+            $('#SlideToggleBtn').click(function() {
+                $('#box p').slideToggle();
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

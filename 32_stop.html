@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #box {
+            background: lightgreen;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animate</h1>
+
+    <div id="box">Hello world!! </div>
+    <br>
+
+    <button id="AnimateBtn">Animate method</button>
+    <button id="StopBtn">stop method</button>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#AnimateBtn').click(function() {
+
+
+                $('#box').animate({
+                    left: '200px'
+                }, 3000)
+                $('#box').animate({
+                    fontSize: "25px"
+                }, 2000)
+
+            })
+
+            $('#StopBtn').click(function() {
+                // $('#box').stop();
+                // $('#box').stop(true);
+                $('#box').stop(true, true);
+            })
+        })
+    </script>
+</body>
+
+</html>

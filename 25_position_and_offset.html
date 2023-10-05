@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background: lightgreen;
+            padding: 30px;
+            margin: 20px;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>postion and offset</h1>
+
+    <div id="box">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque recusandae dolor reprehenderit nostrum aperiam.</p>
+    </div>
+    <br>
+
+    <button id="positionBtn">Position</button>
+    <button id="offsetBtn">Offset</button>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // $('#positionBtn').click(function() {
+            //     console.log($('#box').position());
+            // })
+
+            // $('#offsetBtn').click(function() {
+            //     console.log($('#box').offset());
+            // })
+
+
+
+            $('#positionBtn').click(function() {
+                var x = $('#box').position();
+                console.log("top : " + x.top + "left : " + x.left);
+            })
+
+            $('#offsetBtn').click(function() {
+                var y = $('#box').offset();
+                console.log("top : " + y.top + "left : " + y.left);
+            })
+
+            // to set the psotion with offset
+
+            // $('#offsetBtn').click(function() {
+            //     $('#box').offset({
+            //         top: 0,
+            //         left: 0
+            //     });
+
+            // })
+        });
+    </script>
+</body>
+
+</html>

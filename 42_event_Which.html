@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+        #box {
+            width: 100%;
+            height: 350px;
+            background: lightcyan;
+            border: 1px solid black;
+        }
+        /* #box {
+            width: 50px;
+            height: 50px;
+            background: gold;
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+
+<body>
+
+
+    <h1>JQUERY Event Which() Method</h1>
+    <div id="box"></div>
+    <br>
+
+    <input type="text" id="inputbox">
+    <br>
+    <h2 style="color: red;"></h2>
+
+
+
+    <h1>Methods list</h1>
+    <ul>
+        <li>Event object methods</li>
+        <ol>
+            <li style="color: red;">event.pageX()</li>
+            <li style="color: red;">event.pageY()</li>
+            <li style="color: red;">event.type()</li>
+            <li>event.which()</li>
+            <li>event.target()</li>
+            <li>event.preventDefault()</li>
+            <li>event.isDefaultPrevented()</li>
+            <li>event.stopPropagation()</li>
+            <li>event.isPropagationStopped()</li>
+            <li>event.data()</li>
+
+        </ol>
+
+    </ul>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // $("#box").on("mouseover mouseout mousedown", function(event) {
+            //     $('h2').html("Event : " + event.type + " which : " + event.which)
+            // })
+
+
+            $("#inputbox").on("keydown", function(event) {
+                $('h2').html(event.type + " ascii value  : " + event.which)
+            })
+
+        })
+    </script>
+</body>
+
+</html>
